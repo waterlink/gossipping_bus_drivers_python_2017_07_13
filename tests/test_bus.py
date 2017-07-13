@@ -22,6 +22,13 @@ class TestBus(unittest.TestCase):
 
         self.assertEqual(self.bus.current_stop(), 6)
 
+    def test_bus_moves_to_the_first_stop_given_enough_minutes(self):
+        self.bus.next_stop()
+        self.bus.next_stop()
+        self.bus.next_stop()
+
+        self.assertEqual(self.bus.current_stop(), 10)
+
 
 if __name__ == '__main__':
     unittest.main()
